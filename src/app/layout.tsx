@@ -35,6 +35,13 @@ function HeaderMenu({ title, links }: { title: string; links: typeof trustLinks 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-US">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2824959172169836"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="bg-slate-100 text-slate-950">
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-30 focus:rounded-lg focus:bg-white focus:p-3">Skip to main content</a>
         <header className="bg-slate-950 text-white">
