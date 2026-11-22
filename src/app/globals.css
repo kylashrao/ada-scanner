@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+:root { color-scheme: light; }
+body { font-family: system-ui, sans-serif; }
+:focus-visible { outline: 3px solid #4338ca; outline-offset: 4px; }
+header :focus-visible, .dark-surface :focus-visible { outline-color: #a5b4fc; }
+::selection { background: #c7d2fe; color: #172554; }
+
+@media print {
+  body:has(.statement-print) { background: white; color: black; }
+  body:has(.statement-print) > :is(header, footer, a) { display: none !important; }
+}

@@ -1,0 +1,660 @@
+[
+  {
+    "slug": "shopify-stores",
+    "name": "Shopify Stores",
+    "riskContext": "A storefront can expose users to barriers across theme, app and hosted checkout boundaries.",
+    "commonFailures": [
+      "Unannounced cart changes",
+      "Swatches only distinguishable by color"
+    ],
+    "remediationChecklist": [
+      "Announce cart updates in a status region",
+      "Name each swatch and test selection through checkout"
+    ],
+    "verificationScenario": "Add two variants, change quantities in the cart drawer and complete checkout. Check that focus follows the drawer and that a screen reader announces the updated quantity, subtotal and any unavailability."
+  },
+  {
+    "slug": "wordpress-sites",
+    "name": "WordPress Sites",
+    "riskContext": "Theme and plugin updates can reintroduce barriers to publishing and contact workflows.",
+    "commonFailures": [
+      "Keyboard-trapped navigation drawers",
+      "Unlabeled plugin forms"
+    ],
+    "remediationChecklist": [
+      "Audit the active theme after updates",
+      "Associate plugin fields with visible labels and test error recovery"
+    ],
+    "verificationScenario": "Open a long article and use its skip link to bypass the header. Open and close the mobile menu, then submit the contact form with an invalid field and confirm focus and error feedback."
+  },
+  {
+    "slug": "dental-clinics",
+    "name": "Dental Clinics",
+    "riskContext": "Appointment access and pre-visit instructions can be blocked by third-party patient tools.",
+    "commonFailures": [
+      "Inaccessible appointment calendars",
+      "Image-only intake instructions"
+    ],
+    "remediationChecklist": [
+      "Provide keyboard date entry",
+      "Publish intake instructions as structured HTML"
+    ],
+    "verificationScenario": "Book a new-patient cleaning using only the keyboard. Confirm you can choose a preferred appointment, read the insurance requirements and receive a confirmation with the correct date."
+  },
+  {
+    "slug": "law-firms",
+    "name": "Law Firms",
+    "riskContext": "An inaccessible consultation form can block a prospective client from requesting services.",
+    "commonFailures": [
+      "Required fields signaled only by color",
+      "Practice-area menus that open only on hover"
+    ],
+    "remediationChecklist": [
+      "Identify required fields in text",
+      "Make all practice areas reachable with keyboard navigation"
+    ],
+    "verificationScenario": "Navigate from a practice area to the consultation form. Trigger a required-field error and verify that the field name, reason and next action are available before sharing any personal details."
+  },
+  {
+    "slug": "real-estate-agencies",
+    "name": "Real Estate Agencies",
+    "riskContext": "Listing discovery and requests for showings may depend on embedded listing software.",
+    "commonFailures": [
+      "Map-only results",
+      "Photo carousels without pause controls"
+    ],
+    "remediationChecklist": [
+      "Offer equivalent filterable listing cards",
+      "Add keyboard navigation and a pause control"
+    ],
+    "verificationScenario": "Filter for a property with step-free access and request a showing from the results list. Make sure opening and closing a property gallery returns focus to the listing you came from."
+  },
+  {
+    "slug": "restaurants-ordering",
+    "name": "Restaurants & Ordering",
+    "riskContext": "Menus and orders can be inaccessible even when a homepage is usable.",
+    "commonFailures": [
+      "Scanned menu PDFs",
+      "Modifier dialogs with lost focus"
+    ],
+    "remediationChecklist": [
+      "Publish prices and allergens in HTML",
+      "Restore focus after customizations and test the full order path"
+    ],
+    "verificationScenario": "Order a meal with an allergy-related modification using only the keyboard. Confirm that the menu exposes allergen information and that changing the order communicates the new price and selection."
+  },
+  {
+    "slug": "medical-practices",
+    "name": "Medical Practices",
+    "riskContext": "Access to appointments and preparation materials can implicate healthcare accessibility duties.",
+    "commonFailures": [
+      "Unlabeled insurance fields",
+      "Untagged preparation PDFs"
+    ],
+    "remediationChecklist": [
+      "Give every insurance input a visible label",
+      "Publish accessible prep instructions and test referrals and booking"
+    ],
+    "verificationScenario": "Find a provider, choose a new-patient visit and retrieve preparation instructions without using a pointer. Check the affiliated scheduling portal and instructions for matching provider and appointment details."
+  },
+  {
+    "slug": "saas-b2b-sites",
+    "name": "SaaS & B2B Sites",
+    "riskContext": "Common barriers can prevent users from evaluating a product or participating in a demo.",
+    "commonFailures": [
+      "Uncaptioned feature demos",
+      "Demo-request widgets that hide errors"
+    ],
+    "remediationChecklist": [
+      "Caption recorded demos",
+      "Associate errors with inputs and test confirmation announcements"
+    ],
+    "verificationScenario": "Find a feature comparison, play a demonstration with captions and request a demo. Submit an invalid business email and confirm the error is announced and the other fields retain their values."
+  },
+  {
+    "slug": "higher-ed-municipal-portals",
+    "name": "Higher Ed & Municipal Portals",
+    "riskContext": "Public institutions should assess Title II coverage and the applicable DOJ deadline; private institutions may have other accessibility obligations.",
+    "commonFailures": [
+      "Scanned policy documents",
+      "Unreachable registration steps"
+    ],
+    "remediationChecklist": [
+      "Replace active scanned documents with accessible equivalents",
+      "Test admissions or resident transactions end to end"
+    ],
+    "verificationScenario": "Locate application deadlines or public service hours, then complete a registration step with a screen reader. Check that any linked policy document and the vendor-hosted registration screens are usable."
+  },
+  {
+    "slug": "public-libraries",
+    "name": "Public Libraries",
+    "riskContext": "Catalog and hold workflows affect access to publicly offered services.",
+    "commonFailures": [
+      "Search facets lacking state",
+      "Hold dialogs without accessible names"
+    ],
+    "remediationChecklist": [
+      "Expose filter state programmatically",
+      "Name the hold dialog and verify focus returns to the title"
+    ],
+    "verificationScenario": "Search for a large-print book, filter by branch and place a hold. Verify the branch name and hold status in the confirmation and confirm that canceling the hold returns focus to the correct result."
+  },
+  {
+    "slug": "city-government-websites",
+    "name": "City Government Websites",
+    "riskContext": "Municipal services subject to Title II can span both agency pages and vendor tools.",
+    "commonFailures": [
+      "Inaccessible meeting packets",
+      "Permit applications requiring a mouse"
+    ],
+    "remediationChecklist": [
+      "Publish accessible agendas and packets",
+      "Include permit vendors in keyboard and document reviews"
+    ],
+    "verificationScenario": "Start a residential permit application, attach a document and find a related council agenda. Check the upload status, text alternatives for required plans and agenda reading order."
+  },
+  {
+    "slug": "county-government-websites",
+    "name": "County Government Websites",
+    "riskContext": "Residents need accessible access to records and tax services administered by counties.",
+    "commonFailures": [
+      "Property searches with unlabeled date ranges",
+      "PDF tax notices without reading order"
+    ],
+    "remediationChecklist": [
+      "Name both ends of date ranges",
+      "Check tagged notices against the original reading order"
+    ],
+    "verificationScenario": "Search for an assessment by parcel or street address and open the current notice. Verify that field errors identify the input and that the notice names each tax item alongside its amount."
+  },
+  {
+    "slug": "public-transit-agencies",
+    "name": "Public Transit Agencies",
+    "riskContext": "Riders need accessible route planning and comparable disruption information.",
+    "commonFailures": [
+      "Color-only route maps",
+      "Live delays that screen readers miss"
+    ],
+    "remediationChecklist": [
+      "Publish route names and stop sequences in text",
+      "Announce delay updates without stealing focus"
+    ],
+    "verificationScenario": "Plan an accessible trip with a transfer and locate service disruptions on the route. Cross-check that the text directions include departure times and temporary stop changes shown on the map."
+  },
+  {
+    "slug": "airline-ticketing-sites",
+    "name": "Airline Ticketing Sites",
+    "riskContext": "Passenger reservation and flight changes can involve aviation-specific accessibility duties.",
+    "commonFailures": [
+      "Seat maps with no keyboard operation",
+      "Unannounced fare changes"
+    ],
+    "remediationChecklist": [
+      "Provide accessible seat selection controls",
+      "Announce revised fare totals and test rebooking"
+    ],
+    "verificationScenario": "Select a fare, choose an available seat with a keyboard and verify the new price. Then make a date change and confirm the difference, fees and total are communicated before submission."
+  },
+  {
+    "slug": "hotel-booking-websites",
+    "name": "Hotel Booking Websites",
+    "riskContext": "Reservation flows can obscure accessible room features and availability.",
+    "commonFailures": [
+      "Room filters missing labels",
+      "Accessibility details available only as icons"
+    ],
+    "remediationChecklist": [
+      "List accessible features in text",
+      "Test filtering and booking an accessible room"
+    ],
+    "verificationScenario": "Filter for a mobility-accessible room and confirm specific features on the room detail and booking summary. Test that the calendar, accessibility filters and reservation details work with a screen reader."
+  },
+  {
+    "slug": "vacation-rental-marketplaces",
+    "name": "Vacation Rental Marketplaces",
+    "riskContext": "Guests may need property access details before they can make a booking decision.",
+    "commonFailures": [
+      "Inaccessible map pins",
+      "Photo galleries without useful labels"
+    ],
+    "remediationChecklist": [
+      "Provide a structured list for property searches",
+      "Label gallery controls and describe relevant access features"
+    ],
+    "verificationScenario": "Find a rental with a step-free entry. Compare the listing text and images for consistent access information and check that closing the photo viewer returns focus to the originating thumbnail."
+  },
+  {
+    "slug": "banks-credit-unions",
+    "name": "Banks & Credit Unions",
+    "riskContext": "Customers may be blocked from managing accounts or verifying transactions.",
+    "commonFailures": [
+      "Inaccessible one-time-code fields",
+      "Statements with broken reading order"
+    ],
+    "remediationChecklist": [
+      "Use a labeled code field with paste support",
+      "Verify account statements with a screen reader"
+    ],
+    "verificationScenario": "Sign into a test account, paste a verification code and download a recent statement. Check error recovery when the code expires and verify that transaction dates and amounts read together."
+  },
+  {
+    "slug": "insurance-agencies",
+    "name": "Insurance Agencies",
+    "riskContext": "Applicants can lose access to quoting or claims if vendor steps are inaccessible.",
+    "commonFailures": [
+      "Progress communicated by color",
+      "File upload errors with no text"
+    ],
+    "remediationChecklist": [
+      "Add named progress steps",
+      "Announce accepted formats and upload failures next to the control"
+    ],
+    "verificationScenario": "Start a claim, upload an unsupported file and replace it with a supported document. Check that the upload constraints are available before selection and the success message identifies the accepted file."
+  },
+  {
+    "slug": "mortgage-lenders",
+    "name": "Mortgage Lenders",
+    "riskContext": "Borrowers need usable disclosures and document submission during time-sensitive applications.",
+    "commonFailures": [
+      "Application timeouts without warning",
+      "Untagged disclosure documents"
+    ],
+    "remediationChecklist": [
+      "Offer accessible timeout extension",
+      "Check disclosure semantics and document upload by keyboard"
+    ],
+    "verificationScenario": "Pause a test loan application until its inactivity warning appears. Extend the session with the keyboard, upload a disclosure and confirm that reviewing a document leaves the application data intact."
+  },
+  {
+    "slug": "grocery-delivery-services",
+    "name": "Grocery Delivery Services",
+    "riskContext": "Grocery customers can face barriers when choosing substitutions or completing checkout.",
+    "commonFailures": [
+      "Product quantity buttons missing names",
+      "Substitution controls with no selected state"
+    ],
+    "remediationChecklist": [
+      "Name quantity buttons with the item context",
+      "Expose selected substitutions and announce total changes"
+    ],
+    "verificationScenario": "Add several items, change one quantity and choose a substitute. Confirm that every control identifies its product and that the live total reflects each meaningful change without repetitive announcements."
+  },
+  {
+    "slug": "pharmacies",
+    "name": "Pharmacies",
+    "riskContext": "Prescription services can be unavailable to users who cannot access refill or pickup flows.",
+    "commonFailures": [
+      "Unreadable dosage instructions",
+      "Refill fields missing format hints"
+    ],
+    "remediationChecklist": [
+      "Publish dosage instructions as readable text",
+      "Associate refill hints and errors with their fields"
+    ],
+    "verificationScenario": "Request a test refill, select pickup and correct an invalid prescription number. Verify that instructions remain available and the confirmation clearly identifies the selected location and estimated time."
+  },
+  {
+    "slug": "fitness-centers",
+    "name": "Fitness Centers",
+    "riskContext": "Members may be unable to review or purchase classes if scheduling tools are inaccessible.",
+    "commonFailures": [
+      "Class calendars navigable only by pointer",
+      "Uncaptioned orientation videos"
+    ],
+    "remediationChecklist": [
+      "Offer a keyboard-operable class list",
+      "Caption orientation videos and describe key demonstrations"
+    ],
+    "verificationScenario": "Find a beginner class with automated recurring membership disabled. Confirm that schedule information can be read without using the calendar grid and that the booking receipt states the selected time."
+  },
+  {
+    "slug": "museums-galleries",
+    "name": "Museums & Galleries",
+    "riskContext": "Opening hours, exhibit materials and ticketing need accessible paths for prospective visitors.",
+    "commonFailures": [
+      "Text embedded in exhibit images",
+      "Unannounced ticket availability"
+    ],
+    "remediationChecklist": [
+      "Supply equivalent exhibit text",
+      "Announce changes to ticket availability"
+    ],
+    "verificationScenario": "Locate an exhibition and book a ticket. Check that exhibition labels convey key content, ticket availability updates are announced and the order summary reflects access accommodations."
+  },
+  {
+    "slug": "theaters-event-venues",
+    "name": "Theaters & Event Venues",
+    "riskContext": "Patrons may lose access to ticket inventory and seating options.",
+    "commonFailures": [
+      "Canvas-only seat selection",
+      "Availability communicated by color"
+    ],
+    "remediationChecklist": [
+      "Provide keyboard-operable seat listings",
+      "Name seat features and availability in text"
+    ],
+    "verificationScenario": "Select accessible seating with a companion seat. Verify that seat type, availability and price are perceivable in the list and that the order summary confirms both seating choices."
+  },
+  {
+    "slug": "online-education-platforms",
+    "name": "Online Education Platforms",
+    "riskContext": "Inaccessible coursework can prevent meaningful participation in learning.",
+    "commonFailures": [
+      "Drag-only quiz questions",
+      "Lecture captions missing"
+    ],
+    "remediationChecklist": [
+      "Provide keyboard interaction for assessment tasks",
+      "Review synchronized captions and course completion"
+    ],
+    "verificationScenario": "Complete a sample lesson and quiz by keyboard, including any matching question. Check the equivalent interaction, captions and whether the completion message is announced at the end."
+  },
+  {
+    "slug": "childcare-providers",
+    "name": "Childcare Providers",
+    "riskContext": "Families can be blocked from enrollment and fee information before making contact.",
+    "commonFailures": [
+      "Enrollment packets with unlabeled fields",
+      "Fees shown only in images"
+    ],
+    "remediationChecklist": [
+      "Label enrollment fields and provide an accessible submission path",
+      "Publish tuition schedules as text"
+    ],
+    "verificationScenario": "Find the tuition schedule for a specific age group and start an enrollment application. Check that the forms are operable at high zoom and that submission errors identify each affected field."
+  },
+  {
+    "slug": "automotive-dealerships",
+    "name": "Automotive Dealerships",
+    "riskContext": "Shoppers need access to inventory and service scheduling across dealer widgets.",
+    "commonFailures": [
+      "Unlabeled finance sliders",
+      "Inventory updates requiring a page reload"
+    ],
+    "remediationChecklist": [
+      "Offer a labeled numeric financing input",
+      "Announce inventory changes without shifting focus"
+    ],
+    "verificationScenario": "Filter inventory for a particular model then schedule a service visit. Verify filter changes are announced and keyboard users can change the financing estimate by entering a numeric value."
+  },
+  {
+    "slug": "home-services-contractors",
+    "name": "Home Services Contractors",
+    "riskContext": "Inaccessible request forms can block users seeking time-sensitive repairs.",
+    "commonFailures": [
+      "Invisible focus in quote forms",
+      "Contact options expressed with icon-only links"
+    ],
+    "remediationChecklist": [
+      "Style focus on quote fields",
+      "Give phone and messaging links descriptive text"
+    ],
+    "verificationScenario": "Request an urgent quote without using a pointer. Verify that the emergency contact link identifies the business, the quote form shows keyboard focus and the confirmation lists an expected response time."
+  },
+  {
+    "slug": "utility-provider-portals",
+    "name": "Utility Provider Portals",
+    "riskContext": "Customers must be able to read outage information and manage essential accounts.",
+    "commonFailures": [
+      "Outage maps without text summaries",
+      "Bill payment errors only shown at the top"
+    ],
+    "remediationChecklist": [
+      "Publish searchable outage summaries",
+      "Link payment error summaries to their fields"
+    ],
+    "verificationScenario": "Look up an outage by street address, then try paying a test bill with a missing required field. Confirm the outage location is available in text and the error jumps to the correct field."
+  },
+  {
+    "slug": "food-banks-nonprofits",
+    "name": "Food Banks & Nonprofits",
+    "riskContext": "People seeking assistance need usable access to eligibility information and pickup locations.",
+    "commonFailures": [
+      "Eligibility content distributed only in image flyers",
+      "Maps without location lists"
+    ],
+    "remediationChecklist": [
+      "Publish eligibility as HTML",
+      "List pickup hours and locations in text"
+    ],
+    "verificationScenario": "Find a pickup site and determine eligibility on a narrow screen. Check that address, hours and required documents are available together in text and readable in the same order with a screen reader."
+  },
+  {
+    "slug": "shopware-stores",
+    "name": "Shopware Stores",
+    "riskContext": "Theme components and extensions can introduce barriers between product browsing and purchase.",
+    "commonFailures": [
+      "Variant selectors lacking labels",
+      "Unannounced comparison selection"
+    ],
+    "remediationChecklist": [
+      "Name variant options and expose selected values",
+      "Announce additions to product comparison"
+    ],
+    "verificationScenario": "Compare two products and switch to a different variant from the detail page. Verify that variation labels convey changes to availability and that compare state persists through navigation."
+  },
+  {
+    "slug": "woocommerce-stores",
+    "name": "WooCommerce Stores",
+    "riskContext": "Checkout extensions and theme overrides often change accessible form semantics.",
+    "commonFailures": [
+      "Guest checkout errors detached from inputs",
+      "Product tabs lacking keyboard navigation"
+    ],
+    "remediationChecklist": [
+      "Test checkout validation for guest orders",
+      "Implement keyboard-operable product tabs"
+    ],
+    "verificationScenario": "Add a product, select a shipping option and submit a guest checkout with an invalid postal code. Confirm the postal code error is linked to its input and other checkout values remain."
+  },
+  {
+    "slug": "squarespace-sites",
+    "name": "Squarespace Sites",
+    "riskContext": "Template blocks and custom embeds can undo accessible editorial structure.",
+    "commonFailures": [
+      "Skipped heading levels in blocks",
+      "Low contrast over background photos"
+    ],
+    "remediationChecklist": [
+      "Use heading blocks according to section hierarchy",
+      "Measure hero text contrast across breakpoints"
+    ],
+    "verificationScenario": "Inspect the heading outline of a services page after switching templates. Check that every service remains under a meaningful heading and verify text contrast at mobile and desktop hero crops."
+  },
+  {
+    "slug": "wix-sites",
+    "name": "Wix Sites",
+    "riskContext": "Widget configuration can affect accessibility of service and contact paths.",
+    "commonFailures": [
+      "Unlabeled social icons",
+      "Booking widget focus disappearing"
+    ],
+    "remediationChecklist": [
+      "Give social links accessible names",
+      "Test focus order from service selection through booking"
+    ],
+    "verificationScenario": "Book a sample service from a Wix widget using keyboard navigation. Confirm you can choose a date, navigate back to earlier steps and return to the booking trigger when dismissing the widget."
+  },
+  {
+    "slug": "webflow-sites",
+    "name": "Webflow Sites",
+    "riskContext": "Custom interactions can hide content or controls from keyboard users.",
+    "commonFailures": [
+      "Hover-only disclosures",
+      "Modal titles missing"
+    ],
+    "remediationChecklist": [
+      "Expose disclosures through native controls",
+      "Connect each modal title and verify focus restoration"
+    ],
+    "verificationScenario": "Open a menu disclosure and a gated-download dialog from a Webflow page. Check escape and close behavior, dialog naming and whether the original trigger receives focus at dismissal."
+  },
+  {
+    "slug": "drupal-sites",
+    "name": "Drupal Sites",
+    "riskContext": "Editorial workflows can introduce barriers in regularly updated institutional content.",
+    "commonFailures": [
+      "Media fields missing alternatives",
+      "Filters with unlabeled controls"
+    ],
+    "remediationChecklist": [
+      "Require editorial review of meaningful image alternatives",
+      "Label views filters and verify their status messages"
+    ],
+    "verificationScenario": "Publish a new Drupal content item with meaningful imagery, then find it through a filtered view. Check the published alternative text, result-count announcement and active filter state."
+  },
+  {
+    "slug": "adobe-commerce-stores",
+    "name": "Adobe Commerce Stores",
+    "riskContext": "Custom catalog and checkout modules can affect many store views at once.",
+    "commonFailures": [
+      "Product comparison tables missing headers",
+      "Shipping methods missing group labels"
+    ],
+    "remediationChecklist": [
+      "Add scoped headers to comparisons",
+      "Group shipping methods under a legend"
+    ],
+    "verificationScenario": "Compare catalog items and complete the shipping-method step of a test checkout. Check row and column relationships with a screen reader and confirm shipping labels include cost and delivery timing."
+  },
+  {
+    "slug": "bigcommerce-stores",
+    "name": "BigCommerce Stores",
+    "riskContext": "Storefront customizations can create barriers on shared product templates.",
+    "commonFailures": [
+      "Quick-view controls without names",
+      "Auto-rotating recommendations"
+    ],
+    "remediationChecklist": [
+      "Name quick-view buttons with product context",
+      "Provide a pause control for moving recommendations"
+    ],
+    "verificationScenario": "Open quick view from several items and dismiss it with the keyboard. Verify each trigger identifies its item and confirm the storefront can be explored while recommendations are paused."
+  },
+  {
+    "slug": "prestashop-stores",
+    "name": "PrestaShop Stores",
+    "riskContext": "Module-driven product and cart flows can create inconsistent interaction behavior.",
+    "commonFailures": [
+      "Unannounced discount changes",
+      "Filter panels that lose focus"
+    ],
+    "remediationChecklist": [
+      "Announce discount totals",
+      "Return focus to the filter toggle after closing the panel"
+    ],
+    "verificationScenario": "Apply a combination of facets and remove a coupon from a test cart. Check that focus returns to the filter toggle and that discount removal announces the updated total."
+  },
+  {
+    "slug": "headless-commerce",
+    "name": "Headless Commerce",
+    "riskContext": "A custom frontend must preserve access through asynchronous product and payment interactions.",
+    "commonFailures": [
+      "Route changes leaving focus behind",
+      "Payment frames missing titles"
+    ],
+    "remediationChecklist": [
+      "Move focus meaningfully on navigation",
+      "Name payment frames and test embedded payment controls"
+    ],
+    "verificationScenario": "Navigate between product, cart and checkout views. Confirm the keyboard and screen reader location remains meaningful after route changes and the payment fields work inside their embedded frame."
+  },
+  {
+    "slug": "membership-associations",
+    "name": "Membership Associations",
+    "riskContext": "Inaccessible applications or renewals can exclude prospective or existing members.",
+    "commonFailures": [
+      "Dues displayed in unstructured grids",
+      "Renewal timers without warning"
+    ],
+    "remediationChecklist": [
+      "Use a headed dues table",
+      "Provide accessible timeout notification and extension"
+    ],
+    "verificationScenario": "Compare membership tiers and renew one on a test account. Verify the dues table reads correctly by row and that extending the renewal session preserves the entered information."
+  },
+  {
+    "slug": "employment-recruiting-portals",
+    "name": "Employment & Recruiting Portals",
+    "riskContext": "Application friction can prevent disabled candidates from participating in hiring.",
+    "commonFailures": [
+      "Resume upload controls missing names",
+      "Screening forms that reject keyboard input"
+    ],
+    "remediationChecklist": [
+      "Name the upload control and describe constraints",
+      "Complete a screening workflow with keyboard only"
+    ],
+    "verificationScenario": "Complete a test job application with a valid resume and an invalid upload. Check that the upload status is announced and applicants can navigate screening questions in logical order."
+  },
+  {
+    "slug": "veterinary-clinics",
+    "name": "Veterinary Clinics",
+    "riskContext": "Clients need usable access to urgent-care instructions and bookings.",
+    "commonFailures": [
+      "Emergency call links without text",
+      "Client intake forms built as scans"
+    ],
+    "remediationChecklist": [
+      "Publish and label emergency contact actions",
+      "Convert intake forms to accessible fields"
+    ],
+    "verificationScenario": "Find emergency hours and start the new-client appointment workflow. Verify the emergency phone link is descriptive and intake fields remain readable at 200% text zoom."
+  },
+  {
+    "slug": "local-news-publishers",
+    "name": "Local News Publishers",
+    "riskContext": "Readers may be blocked from articles or subscriptions by inaccessible paywalls.",
+    "commonFailures": [
+      "Paywall dialogs with lost focus",
+      "Editorial graphics without equivalents"
+    ],
+    "remediationChecklist": [
+      "Manage paywall focus and name its close control",
+      "Provide text summaries for informative graphics"
+    ],
+    "verificationScenario": "Open a subscription prompt, dismiss it and continue reading. Confirm that focus returns to the article and that complex charts provide a text description or accessible data behind the graphic."
+  },
+  {
+    "slug": "online-donation-platforms",
+    "name": "Online Donation Platforms",
+    "riskContext": "Donors can be unable to select giving frequency or recover from payment problems.",
+    "commonFailures": [
+      "Recurring gift toggles without state",
+      "Card errors that only use color"
+    ],
+    "remediationChecklist": [
+      "Expose recurring gift state",
+      "Associate readable payment errors with their inputs"
+    ],
+    "verificationScenario": "Choose a recurring donation, switch to a single gift and trigger a test payment error. Verify the selected frequency, total and recovery instructions are announced and focus remains useful."
+  },
+  {
+    "slug": "telehealth-platforms",
+    "name": "Telehealth Platforms",
+    "riskContext": "Remote patients may be unable to join or use virtual care workflows.",
+    "commonFailures": [
+      "Camera dialogs with inaccessible controls",
+      "Waiting room updates without announcements"
+    ],
+    "remediationChecklist": [
+      "Test join and permission steps by keyboard",
+      "Announce meaningful waiting room changes"
+    ],
+    "verificationScenario": "Join a mock visit with microphone permission denied. Ensure permission controls work by keyboard and that waiting status and available alternatives are conveyed to assistive technology."
+  },
+  {
+    "slug": "election-information-portals",
+    "name": "Election Information Portals",
+    "riskContext": "Public voting information and registration tools can fall within Title II coverage.",
+    "commonFailures": [
+      "Polling place maps without addresses in text",
+      "Ballot PDFs without structure"
+    ],
+    "remediationChecklist": [
+      "Publish polling locations in an accessible list",
+      "Check ballot document reading order and accessible alternatives"
+    ],
+    "verificationScenario": "Find a polling location by address and open the sample ballot with a screen reader. Confirm that the text lists location access information and each ballot contest reads in the appropriate sequence."
+  }
+]

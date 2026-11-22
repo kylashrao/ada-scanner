@@ -1,0 +1,254 @@
+[
+  {
+    "id": "image-alt",
+    "title": "Missing image alternative",
+    "criterion": "1.1.1",
+    "level": "A",
+    "severity": "serious",
+    "review": false,
+    "rationale": "Images and image controls need alternatives that convey their purpose.",
+    "remediation": [
+      "Describe the image’s purpose in its current context.",
+      "Use an empty alt for purely decorative images and a functional label for image buttons."
+    ],
+    "example": "<img src=\"/map.png\" alt=\"Accessible entrance on Pine Street\">"
+  },
+  {
+    "id": "empty-alt-review",
+    "title": "Review empty image alternative",
+    "criterion": "1.1.1",
+    "level": "A",
+    "severity": "minor",
+    "review": true,
+    "rationale": "An empty alternative is appropriate for decoration. A human must confirm the image has no instructional or functional purpose.",
+    "remediation": [
+      "Check whether the image carries information available nowhere else.",
+      "Keep alt empty for decoration or supply equivalent text for informative imagery."
+    ],
+    "example": "<img src=\"/divider.png\" alt=\"\">"
+  },
+  {
+    "id": "form-label",
+    "title": "Unnamed form control",
+    "criterion": "4.1.2",
+    "level": "A",
+    "severity": "critical",
+    "review": false,
+    "rationale": "Screen reader users need the control name to enter the correct information.",
+    "remediation": [
+      "Add a visible label and associate it with the control’s unique ID.",
+      "Retain instructions separately through aria-describedby where needed."
+    ],
+    "example": "<label for=\"email\">Email address</label><input id=\"email\" type=\"email\">"
+  },
+  {
+    "id": "heading-order",
+    "title": "Skipped heading level",
+    "criterion": "1.3.1",
+    "level": "A",
+    "severity": "moderate",
+    "review": true,
+    "rationale": "Heading rank should reflect section nesting and relationships.",
+    "remediation": [
+      "Review the document outline and restore the appropriate parent heading.",
+      "Choose heading levels by structure and use CSS for visual sizing."
+    ],
+    "example": "<h1>Services</h1><h2>Appointments</h2><h3>New patients</h3>"
+  },
+  {
+    "id": "page-heading",
+    "title": "Missing primary heading",
+    "criterion": "2.4.6",
+    "level": "AA",
+    "severity": "minor",
+    "review": true,
+    "rationale": "A descriptive primary heading helps users identify the page. Its absence requires structural review.",
+    "remediation": [
+      "Add a visible heading that names the page’s main purpose.",
+      "Check that subordinate headings describe their sections."
+    ],
+    "example": "<main><h1>Book an appointment</h1></main>"
+  },
+  {
+    "id": "page-language",
+    "title": "Missing document language",
+    "criterion": "3.1.1",
+    "level": "A",
+    "severity": "serious",
+    "review": false,
+    "rationale": "The document language allows assistive technology to choose suitable pronunciation.",
+    "remediation": [
+      "Set the primary BCP 47 language on the root html element.",
+      "Mark substantial passages in another language with their own lang attribute."
+    ],
+    "example": "<html lang=\"en-US\">"
+  },
+  {
+    "id": "link-button-name",
+    "title": "Unnamed link or button",
+    "criterion": "4.1.2",
+    "level": "A",
+    "severity": "critical",
+    "review": false,
+    "rationale": "Interactive elements need an accessible name that communicates their action or destination.",
+    "remediation": [
+      "Add descriptive visible text where possible.",
+      "Provide an accessible name for icon-only controls."
+    ],
+    "example": "<button type=\"button\" aria-label=\"Close dialog\">×</button>"
+  },
+  {
+    "id": "main-landmark",
+    "title": "Missing main landmark",
+    "criterion": "2.4.1",
+    "level": "A",
+    "severity": "moderate",
+    "review": true,
+    "rationale": "A main landmark supports navigation to primary content. Other bypass mechanisms also exist.",
+    "remediation": [
+      "Wrap primary content in a main element.",
+      "Provide a keyboard-accessible skip link pointing to that region."
+    ],
+    "example": "<a href=\"#main\">Skip to main content</a><main id=\"main\">…</main>"
+  },
+  {
+    "id": "viewport-zoom",
+    "title": "Zoom restricted by viewport",
+    "criterion": "1.4.4",
+    "level": "AA",
+    "severity": "serious",
+    "review": false,
+    "rationale": "People with low vision may need to enlarge text to 200%.",
+    "remediation": [
+      "Remove viewport directives that disable zoom or cap it below two times.",
+      "Test enlarged text and responsive reflow without loss of content."
+    ],
+    "example": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+  },
+  {
+    "id": "frame-title",
+    "title": "Missing frame title",
+    "criterion": "4.1.2",
+    "level": "A",
+    "severity": "serious",
+    "review": true,
+    "rationale": "A specific frame title describes the purpose of embedded content. Review other accessible naming where applicable.",
+    "remediation": [
+      "Add a concise title describing the embedded content.",
+      "Evaluate the embedded experience independently."
+    ],
+    "example": "<iframe title=\"Appointment booking\" src=\"/appointments\"></iframe>"
+  },
+  {
+    "id": "table-headers",
+    "title": "Table needs header review",
+    "criterion": "1.3.1",
+    "level": "A",
+    "severity": "moderate",
+    "review": true,
+    "rationale": "Data tables need programmatic headers so people can identify each cell’s context.",
+    "remediation": [
+      "Use th with scope for simple row and column headers.",
+      "Use CSS for page layout and review complex table associations manually."
+    ],
+    "example": "<table><tr><th scope=\"col\">Service</th><th scope=\"col\">Price</th></tr><tr><td>Consultation</td><td>$25</td></tr></table>"
+  },
+  {
+    "id": "inline-contrast",
+    "title": "Low inline text contrast",
+    "criterion": "1.4.3",
+    "level": "AA",
+    "severity": "serious",
+    "review": false,
+    "rationale": "Normal text requires a 4.5:1 ratio. Qualifying large text requires 3:1.",
+    "remediation": [
+      "Choose foreground and background colors that meet the appropriate ratio.",
+      "Verify computed colors and states in a browser, including hover and focus."
+    ],
+    "example": "<p style=\"color:#172554;background:#fff\">Appointment confirmed</p>"
+  },
+  {
+    "id": "keyboard-operation",
+    "title": "Keyboard operation",
+    "criterion": "2.1.1",
+    "level": "A",
+    "severity": "critical",
+    "review": true,
+    "rationale": "Every applicable interaction must work through a keyboard interface.",
+    "remediation": [
+      "Operate menus and forms with Tab, Shift+Tab, Enter, Space and applicable arrow keys.",
+      "Use native controls or implement the expected keyboard behavior for custom widgets."
+    ],
+    "example": "<button type=\"button\">Open filters</button>"
+  },
+  {
+    "id": "focus-visible",
+    "title": "Visible keyboard focus",
+    "criterion": "2.4.7",
+    "level": "AA",
+    "severity": "serious",
+    "review": true,
+    "rationale": "Keyboard users need a visible indicator of which control has focus.",
+    "remediation": [
+      "Keep or replace the browser’s focus outline.",
+      "Check the indicator against surrounding colors and in high contrast modes."
+    ],
+    "example": "button:focus-visible { outline: 3px solid #4338ca; outline-offset: 3px; }"
+  },
+  {
+    "id": "error-identification",
+    "title": "Clear form errors",
+    "criterion": "3.3.1",
+    "level": "A",
+    "severity": "serious",
+    "review": true,
+    "rationale": "Input errors need text that identifies the affected field and explains the problem.",
+    "remediation": [
+      "Describe the specific error next to the field.",
+      "Associate the message with the control and move focus to a summary where useful."
+    ],
+    "example": "<input aria-invalid=\"true\" aria-describedby=\"email-error\"><p id=\"email-error\">Enter a valid email address.</p>"
+  },
+  {
+    "id": "status-message",
+    "title": "Announced status updates",
+    "criterion": "4.1.3",
+    "level": "AA",
+    "severity": "moderate",
+    "review": true,
+    "rationale": "Assistive technology should be able to present status messages without moving focus.",
+    "remediation": [
+      "Keep a live status region in the DOM before its text changes.",
+      "Announce relevant progress or completion without interrupting the user."
+    ],
+    "example": "<p role=\"status\">Three appointments available.</p>"
+  },
+  {
+    "id": "reflow",
+    "title": "Responsive reflow",
+    "criterion": "1.4.10",
+    "level": "AA",
+    "severity": "serious",
+    "review": true,
+    "rationale": "At the equivalent of 320 CSS pixels, most content should avoid scrolling in two dimensions.",
+    "remediation": [
+      "Test at a narrow viewport and at high zoom.",
+      "Allow content to wrap and keep complex two-dimensional regions independently scrollable."
+    ],
+    "example": ".form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }"
+  },
+  {
+    "id": "captions",
+    "title": "Prerecorded captions",
+    "criterion": "1.2.2",
+    "level": "A",
+    "severity": "serious",
+    "review": true,
+    "rationale": "Prerecorded synchronized media generally needs captions for meaningful speech and sound.",
+    "remediation": [
+      "Publish synchronized captions and review names and speaker changes.",
+      "Include meaningful sounds when needed to understand the content."
+    ],
+    "example": "<video controls><track kind=\"captions\" src=\"/captions.vtt\" srclang=\"en\" label=\"English\"></video>"
+  }
+]

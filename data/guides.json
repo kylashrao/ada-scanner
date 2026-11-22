@@ -1,0 +1,520 @@
+[
+  {
+    "slug": "ada-title-iii-small-business",
+    "title": "ADA Title III Website Compliance Guide for US Small Businesses",
+    "description": "Plan a practical accessibility audit of customer journeys, fix shared barriers and assess Title III questions with the right evidence.",
+    "intro": "A small business usually discovers its biggest website accessibility problems by trying to complete an ordinary customer task without a mouse. A person wants to compare prices, request an appointment, or pay for an order. The home page loads, but the calendar will not open from the keyboard, the order button has no accessible name, or a zoomed form hides its error message. Start with those barriers. They give the owner, developer and vendor something concrete to fix and verify.",
+    "sections": [
+      {
+        "heading": "Understand which obligation you are evaluating",
+        "paragraphs": [
+          "Title III requires places of public accommodation to provide people with disabilities equal access to goods and services. DOJ guidance discusses websites used by businesses open to the public. Whether a particular business or service falls within Title III can depend on what it does and on applicable law. Website-only businesses, businesses with physical locations, and businesses operating in multiple jurisdictions can raise different legal questions. Consult counsel for those questions, especially if you have received a complaint or demand. A technical accessibility plan can proceed in parallel with that advice.",
+          "WCAG 2.1 Level AA provides a practical technical target teams can use to define tests, write vendor requirements, and check progress. The federal Title II web and mobile rule specifically adopts that standard for covered state and local government content. Its April 2027 and April 2028 deadlines do not set a grace period for private businesses under Title III. Keep the applicable legal questions distinct from the work of improving access. Document which pages and processes you tested and what evidence you have before making a public conformance statement."
+        ]
+      },
+      {
+        "heading": "Inventory tasks rather than home pages",
+        "paragraphs": [
+          "Write down how a customer finds opening hours, understands a service, and takes the next meaningful action. A restaurant might include the menu, allergens, order customization, payment and pickup confirmation. An optometry office might include provider profiles, appointment selection, new patient instructions and a request for a different communication format. When a handoff leads to a vendor site, include that handoff and the endpoint in the inventory. People experience the service as one sequence even when several suppliers operate it.",
+          "Build a small sample that covers different layouts and states. Include at least one mobile-oriented page, a long content page, a form with validation, an embedded tool, and a representative document or downloadable resource. Add a popular landing page when it is different from the home page. Test both the success path and common failures, such as an unavailable appointment or a declined test payment. Mark which work is yours and which may require a vendor ticket. Record the date and pages reviewed so future teams can repeat the sample."
+        ]
+      },
+      {
+        "heading": "Run practical tests and capture evidence",
+        "paragraphs": [
+          "Begin with a markup scanner to catch detectable signals such as unnamed controls or missing document language. Then use Tab and Shift+Tab to see whether all required controls are reachable, focus is visible, and the order makes sense. Use Enter or Space to activate controls as appropriate. Check that dialogs can close and return focus to a sensible place. Increase text size and narrow the viewport, paying attention to clipped controls and messages covered by sticky navigation.",
+          "Use a screen reader to review links, headings and form fields. Listen for what a customer can learn without seeing the page. A form field named “Edit” gives little guidance if the visual label did not become its accessible name. An error may look obvious in red while being conveyed nowhere in text. Record the URL, device, browser, test conditions, steps to reproduce, expected outcome and actual outcome. A reproducible entry such as “changing pickup location moves focus to the start of checkout” is more useful than a screenshot of a low score. Avoid putting real customer records in test tickets."
+        ]
+      },
+      {
+        "heading": "Repair shared components and external dependencies",
+        "paragraphs": [
+          "Prioritize blocks on essential transactions, including keyboard traps, controls without names, inaccessible forms and unreadable instructions. Fixing the reusable header, field component or dialog can resolve the same defect on many pages. Add a regression check to the shared component where feasible. Assign content fixes separately from code fixes. A CMS editor may own page headings and meaningful image descriptions while an engineer owns form error announcements and focus behavior.",
+          "For a vendor-controlled widget, open a ticket with exact reproduction steps and a description of the affected task. Ask for a named owner, the version being fixed and a date for retesting. Accessibility documentation can help procurement, but test the installed configuration. If a customer needs an alternative while you wait for a repair, check whether it offers comparable information, availability, privacy and cost. Consult counsel about legal obligations around alternatives. Keep the underlying defect open until the original journey works or the inaccessible dependency is replaced."
+        ]
+      },
+      {
+        "heading": "Publish a statement that matches reality",
+        "paragraphs": [
+          "An accessibility statement can tell customers how to report problems and request assistance. Include a contact channel that someone checks, the formats you can offer, and any known barriers people might encounter. Avoid promising a response time your team cannot sustain. If a vendor’s calendar has a known limitation, describe the workaround precisely so a caller does not have to rediscover it. Give the contact person enough information to route issues to the right team.",
+          "Treat the statement as a commitment to operations rather than a badge. Keep an internal list of reports and the relevant release or change that fixed them. Where appropriate, ask the person who raised a problem to verify whether the solution works for them. A well-maintained feedback process can expose issues that template testing and automated tools miss. Keep published claims anchored to a defined evaluation scope and update them when that scope changes."
+        ]
+      },
+      {
+        "heading": "Keep the program small enough to maintain",
+        "paragraphs": [
+          "Give each major customer workflow an owner. Review the top tasks after changes to a theme, a checkout application, or published forms. Add a short keyboard and screen-reader acceptance check to release notes. Compare repeated automation findings for the same template, and manually revisit tasks altered by layout or JavaScript. Save short records of confirmed fixes, open vendor issues, and the dates you last verified them.",
+          "If you have one week to start, choose one high-value transaction, list the pages and vendors involved, and retest that transaction end to end after fixing the biggest barrier. Follow it with the next major task. Evidence that a customer can now complete an order or ask for assistance is a stronger internal milestone than a higher home page score. Build on confirmed outcomes, and seek tailored legal advice for questions about coverage, deadlines, settlements or remedies."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "DOJ guidance on web accessibility and the ADA",
+        "url": "https://www.ada.gov/resources/web-guidance/"
+      },
+      {
+        "label": "DOJ Title III regulations",
+        "url": "https://www.ada.gov/law-and-regs/regulations/title-iii-regulations/"
+      },
+      {
+        "label": "W3C WCAG 2.1 standard",
+        "url": "https://www.w3.org/TR/WCAG21/"
+      },
+      {
+        "label": "W3C conformance evaluation methodology overview",
+        "url": "https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/"
+      }
+    ]
+  },
+  {
+    "slug": "ada-title-ii-web-accessibility-rule",
+    "title": "ADA Title II Web Accessibility Rule (2027 & 2028 DOJ Deadlines Explained)",
+    "description": "Find the applicable compliance date, scope covered public services and plan WCAG 2.1 AA remediation across departments and vendors.",
+    "intro": "State and local governments should schedule accessibility work around the date that applies to their entity and the online services people actually use. The Department of Justice’s April 2026 interim final rule extended two deadlines for its web and mobile accessibility requirements. The dates describe when the specific technical rule applies. Existing duties under Title II, including effective communication and equal access to public programs, also require attention before those dates.",
+    "sections": [
+      {
+        "heading": "Confirm the date and the entity’s classification",
+        "paragraphs": [
+          "April 26, 2027 is the deadline for covered public entities with a total population of at least 50,000, except special district governments. That category originally had an April 24, 2026 compliance deadline. April 26, 2028 is the deadline for covered entities with a total population below 50,000 and for any special district government. That category originally had an April 26, 2027 compliance deadline. DOJ issued the one-year extensions in an interim final rule effective April 20, 2026. Track later developments through the DOJ guide and the current regulation.",
+          "The count refers to the population determined under the rule, not the population that happens to use a particular online service. A county portal may serve residents and visitors, but visitor volume is not the classification method. DOJ has population guidance for entities without their own Census population count and explains that special district governments must meet the later date. A school district should review the rule’s treatment of its geographic relationship to other governments instead of assuming that the name “district” makes it a special district government. Document your classification and ask counsel to review questions involving unusual boundaries or shared governance."
+        ]
+      },
+      {
+        "heading": "Establish scope across departments and contractors",
+        "paragraphs": [
+          "The rule is in 28 CFR Part 35, Subpart H. It uses WCAG 2.1 Level AA for covered web content and mobile apps a public entity provides or makes available, including through contractual, licensing or other arrangements. An inventory therefore needs more than the URLs the communications office can edit. List procurement portals, utility payment providers, library catalog apps, hosted public meeting materials, transit schedules, permitting systems, and other digital services that implement public functions.",
+          "Give each item an owner, a public audience, an access path, and the contracts or software involved. Distinguish pages, documents and apps, but group them under the task a person is trying to complete. For instance, paying a fee might involve an agency form, a third-party portal, a confirmation email and a downloadable receipt. A handoff or document that breaks accessibility can make the whole transaction unusable. A contract or product accessibility statement can provide evidence, but it should be checked against the service as deployed and the features your agency actually uses."
+        ]
+      },
+      {
+        "heading": "Apply exceptions to specific content",
+        "paragraphs": [
+          "The rule provides limited exceptions covering certain archived web content, certain preexisting conventional electronic documents, certain content posted by third parties, certain individualized documents secured by a password or other authentication, and preexisting social media posts. The details matter. For example, a static PDF retained for reference differs from an older form people still need to apply for a current service. A vendor publishing on an agency’s behalf under a contract is different from an unaffiliated third party contributing content on its own.",
+          "Do not label an entire archive or portal exempt without comparing the rule’s conditions to the actual content. Ask whether material remains in use, whether it is updated, when it was posted, who controls it, and how someone can request access. Document the rationale at a level staff can review when a resource is revised. Even where an exception to the technical requirements applies, other Title II obligations can still matter, including providing effective communication when a person requests information in an accessible format. Refer questions about alternatives, undue burdens, or fundamental alteration to counsel and the officials responsible for those determinations."
+        ]
+      },
+      {
+        "heading": "Work backward from the deadline",
+        "paragraphs": [
+          "Begin with essential tasks such as applying for benefits, paying fees, locating a polling site, getting emergency information, and registering for a public program. Select representative journeys with multiple page types and consider the consequences if a resident cannot use them. A broken keyboard path to an emergency form can outweigh dozens of cosmetic edits on rarely used pages. Record both barriers and gaps in testing. Fix the templates and vendor dependencies that block several services first, while arranging practical ways to assist residents affected by existing barriers.",
+          "Build procurement and acceptance criteria into that schedule. Ask vendors to show how a keyboard or screen reader user completes your configured workflow and how defects are handled after release. Include accessibility obligations, retesting procedures, responsibility for documents and a way to escalate unresolved defects in new contracts. For an existing contract, identify which aspects the agency can configure, which need a vendor patch, and whether a renewal or migration is due before the compliance date. A vendor’s roadmap is planning information until the agency can verify the delivered fix."
+        ]
+      },
+      {
+        "heading": "Evaluate complete journeys and show your work",
+        "paragraphs": [
+          "Use automated scans to find recurring markup issues, then evaluate the rendered service using keyboards, screen readers, zoom and representative mobile configurations. Test how users recover from a failed payment, an expired session, or an invalid application field. For documents, verify tags, reading order, form labels, meaningful link text and the sequence in which a reader encounters key information. Include assistive technology users and disabled residents in usability evaluation when practical, particularly for services people cannot easily complete another way.",
+          "Keep a record of the application version, tested steps, tools and assistive technology, outstanding barriers, remediation owner, and next review date. Report progress in terms leaders can act on: a license renewal workflow now works with keyboard navigation, or an application packet is still inaccessible and requires a vendor release. Explain what parts of the system were outside the sample. A scan score by itself cannot show whether the public entity meets the regulation."
+        ]
+      },
+      {
+        "heading": "Continue after the date passes",
+        "paragraphs": [
+          "The deadline is the start of ongoing compliance with the technical requirements, not the end of accessibility program work. Assign oversight for publishing, procurement, new feature releases, and requests for help. Establish release checks for high-impact tasks, a document review process, and a clear path for residents to report barriers. Revisit exceptions and vendor promises when content, contracts or use patterns change. Maintain your classification and source citations so a newly assigned official can see which date and obligations the team applied and why."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "DOJ Title II small entity compliance guide",
+        "url": "https://www.ada.gov/resources/small-entity-compliance-guide/"
+      },
+      {
+        "label": "DOJ April 2026 interim final rule extending the dates",
+        "url": "https://www.ada.gov/assets/pdfs/2026-ifr.pdf"
+      },
+      {
+        "label": "W3C WCAG 2.1 standard",
+        "url": "https://www.w3.org/TR/WCAG21/"
+      }
+    ]
+  },
+  {
+    "slug": "wcag-level-a-vs-aa",
+    "title": "WCAG 2.1 Level A vs. Level AA: What Your Website Actually Needs",
+    "description": "Compare A and AA requirements and choose a test scope that includes states, integrations and complete processes.",
+    "intro": "Choosing a conformance target changes what your team checks, how you scope testing, and what you can say about a release. WCAG 2.1 organizes requirements into testable success criteria, each with an assigned level. Level AA builds on Level A. It includes every applicable A and AA criterion, so a team cannot pass AA while leaving known Level A failures unresolved. The levels describe conformance requirements. How urgently you fix a specific barrier is a separate decision based on who is affected and the impact on the task.",
+    "sections": [
+      {
+        "heading": "Read the criteria as outcomes",
+        "paragraphs": [
+          "The four WCAG principles are perceivable, operable, understandable and robust. A perceivable service presents information through accessible means, such as a text alternative for meaningful imagery. Operability includes access through a keyboard interface. Understandability includes making errors identifiable and interactions predictable. Robustness includes programmatic information that browsers and assistive technologies can interpret. The principles organize the standard. The actual conformance assessment depends on the success criteria and their conditions, not on a subjective score for each principle.",
+          "Read the normative wording first and use the W3C Understanding documents and techniques to help apply it. A documented technique is one way to satisfy a requirement in a defined context, and the same outcome may be achieved by other means. For example, a form field with a visible native label and a programmatic association usually provides a reliable accessible name. A custom control might meet the same requirement through other semantics, but it also needs the expected states and operation. Test the result in the browser as well as reading the implementation."
+        ]
+      },
+      {
+        "heading": "Compare common Level A and AA barriers",
+        "paragraphs": [
+          "At Level A, people need a keyboard-operable path through most interactions and an ability to exit controls without a keyboard trap. Meaningful non-text content generally needs an equivalent alternative. The default language of a page must be programmatically determinable. Forms need labels or instructions where user input is required, and automatically detected input errors need to be identified and described in text. These requirements show up in everyday work: users must know what an icon does, what language to pronounce and why a field was rejected.",
+          "Level AA adds requirements that support access under more conditions. Text contrast normally needs at least 4.5:1, with a 3:1 threshold for large text. Visible keyboard focus is a Level AA requirement. Content should reflow at the dimensions set out by the criterion without losing information or functionality, except for content that needs a two-dimensional layout for usage or meaning. Text enlargement, language changes within content, and programmatically determinable status messages also warrant attention at AA. A user who finds the right button by keyboard still needs to see its focus indicator and learn whether the action completed."
+        ]
+      },
+      {
+        "heading": "Scope pages, states and complete processes",
+        "paragraphs": [
+          "WCAG conformance applies to entire web pages, and a page in a complete process cannot conform at a specified level if another page in that process fails to conform at that level. In a checkout, product selection may work but the hosted payment step may be inaccessible. The product page score does not resolve the checkout barrier. Scope includes interaction states such as a cart drawer, a failed login, or a disabled result set. A carousel or modal may look fine in its initial state but interfere with use when animated or opened.",
+          "Third-party content needs evaluation within the process. Include embedded maps, booking tools and payment fields when they are relevant to completing the task. Determine who controls each dependency and how your team can request fixes. Developer tooling can inspect a subset of the conditions, but a compliance claim requires understanding what the standard expects and which pages, technologies and complete processes the claim covers. Keep a clear record of sample selection when the evaluation reviews representative pages instead of each individual page."
+        ]
+      },
+      {
+        "heading": "Plan a test matrix your team can repeat",
+        "paragraphs": [
+          "Turn criteria into small tasks with expected outcomes. For the keyboard and focus checks, use Tab, Shift+Tab and relevant component navigation keys to find and operate controls. For zoom and reflow, test at the defined dimensions and check that content remains readable and useful. For time-sensitive forms, try failure, recovery and exit paths. For screen-reader testing, listen for the focused element, labels, validation, updates and reading order. Test a few meaningful combinations rather than treating any single device as representative of all users.",
+          "Combine those checks with automation. An HTML scan can find a missing language attribute or a button whose markup provides no name. It cannot judge whether a link called “Continue” is sufficiently clear in every context, or whether a booking flow remains usable after an error. Automated scans detect an estimated 30–40% of WCAG issues. Document which tests were automated, which were manual and which were outside scope. Assign findings to the owner of the relevant design system component, application, vendor or content."
+        ]
+      },
+      {
+        "heading": "Choose the target and document it precisely",
+        "paragraphs": [
+          "WCAG 2.1 AA is the technical standard specified by the DOJ rule for covered state and local government web content and mobile apps. An organization working under an agreement, procurement contract or different regulation should check the version and level named in that instrument. Private businesses often use WCAG AA as a technical benchmark while assessing separate legal obligations. WCAG 2.2 introduces additional success criteria, so a team adopting it should document how the chosen version relates to any rule or contract requiring 2.1.",
+          "Write the target into design reviews, publishing guidance and acceptance criteria. Maintain an inventory of reusable components and give each high-impact issue an owner. Prioritize failures that keep people from completing tasks, even when the associated criterion is labeled AA. When reporting progress, identify the version, evaluated scope, remaining barriers and date. If your sample does not support a conformance claim, use a statement of your target and known limitations. Keep the next manual review on the release calendar."
+        ]
+      },
+      {
+        "heading": "A practical release example",
+        "paragraphs": [
+          "Imagine a university application with a multi-step form and a confirmation page. An automated check finds a missing page language and an unnamed add-document button. A keyboard test finds a date picker that captures Tab, and a zoom test shows that long validation messages push the navigation controls outside the usable area. A screen reader confirms that successful uploads remain silent. The fixes span levels and owners. Track them as separate, reproducible defects, then retest the full application with a successful upload and a failed one. The release decision becomes about actual access to applying rather than which issue was easiest to count."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "W3C WCAG 2.1 standard",
+        "url": "https://www.w3.org/TR/WCAG21/"
+      },
+      {
+        "label": "What’s new in WCAG 2.1",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/"
+      },
+      {
+        "label": "W3C conformance evaluation methodology overview",
+        "url": "https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/"
+      },
+      {
+        "label": "DOJ Title II small entity compliance guide",
+        "url": "https://www.ada.gov/resources/small-entity-compliance-guide/"
+      }
+    ]
+  },
+  {
+    "slug": "ecommerce-alt-text",
+    "title": "How to Write Effective Alt Text for E-Commerce & Product Images",
+    "description": "Write actionable text alternatives for galleries, variants, linked images and product charts.",
+    "intro": "Good product alt text gives shoppers the information they need from an image at the point where it appears. A customer comparing shoes may care about the closure, sole shape and colorway. Someone deciding whether a bag fits under a seat may care about the profile shown in a scale photograph. List those decisions before writing. A text alternative is a translation of a useful visual detail into words, shaped by the role of the image and the nearby content.",
+    "sections": [
+      {
+        "heading": "Classify the image before writing",
+        "paragraphs": [
+          "W3C’s alt decision tree starts with purpose. An informative image communicates something the surrounding text does not convey. Give it an alternative that captures that value. A decorative image adds visual styling without a meaningful message. Use an explicit empty alt attribute for decorative HTML images. If a linked image or image button supplies the only accessible name for an action, describe the action or destination. A camera icon inside a named “Open product gallery” button can usually be decorative because the button already conveys its purpose.",
+          "An image can change category from one page to the next. A picture of a display cabinet may be redundant in a search card whose link already names the product and finish. The same photograph on the detail page may show how the doors open, an important detail if the cabinet sits in a narrow room. Evaluate the rendered template. A media library cannot always predict whether a field will be used inside a link, next to a label, or as one of several swatch options."
+        ]
+      },
+      {
+        "heading": "Make the detail useful for buying",
+        "paragraphs": [
+          "Start with the subject and add only differentiating characteristics. “Olive backpack with a zip pocket along the left side” communicates more than “photo of a backpack” or a long sequence of keywords. Use the product’s published color name if it identifies a variant, then provide enough visual description to help distinguish it. When an image only communicates a swatch color, ensure the interactive swatch itself has a name such as “Ocean blue.” If the swatch also signals stock status or selection, expose that state through the control rather than embedding it in the alt text.",
+          "Use gallery descriptions to tell views apart. A front photo can describe the façade of an appliance, a side photo can show the depth of its handle, and a close-up can identify where controls are located. If several images convey the same information, make that redundancy a deliberate editorial choice. Avoid assuming that every asset deserves a completely different long description. Use consistent wording for real distinctions across an entire gallery, and verify that switching variants updates the displayed image and the matching alternative together."
+        ]
+      },
+      {
+        "heading": "Put complicated information where everyone can use it",
+        "paragraphs": [
+          "A size chart, ingredients label, spec diagram or instruction sheet can contain more information than a short alt value can reasonably carry. Publish the full information in structured HTML or another properly accessible format. An image of a size table might have alt text identifying it as a sizing chart, with the measurements presented nearby as an actual table. The accessible table should include headers and units so a shopper can compare values using assistive technology or copy them into a note. A chart may also need a short summary of the trend or decision it supports.",
+          "If a graphic contains important promotional text, publish that text where it is available at high zoom, translates correctly and stays current. A photo with “20% off through Friday” baked in can leave people without access to the offer after a crop or an editorial update. Use real text where practical and provide context about conditions or timing. Where an image genuinely contains words that are necessary to understand it, account for those words in the alternative or the surrounding equivalent."
+        ]
+      },
+      {
+        "heading": "Review how templates and controls speak",
+        "paragraphs": [
+          "Open a product page with a screen reader and move through the image gallery. Listen to the names of thumbnails, zoom controls and next or previous buttons. If moving to an image is a distinct action, the thumbnail button needs a name that explains the view it will show. The full-size image can then explain the detail in more depth. Avoid reading an entire product name several times in the same link where visible text already supplies the name. Listen to the result before declaring a duplicated phrase harmless. Repetition takes time, and it can obscure the part of an alternative that conveys the useful difference.",
+          "Inspect the rendered markup after changes or imports. A theme may assign the product title to every gallery image even when the editor saved different descriptions. A lazy-loaded image may contain useful alternative text only after a script fires. An asset migration may remove blank alt attributes from intentionally decorative images. Check representative layouts including collection cards, product galleries, search results, sale pages and variant combinations. Try a mobile view if the display cuts or swaps assets."
+        ]
+      },
+      {
+        "heading": "Make editors responsible for a workable review",
+        "paragraphs": [
+          "Give content editors a simple practice: identify what the visual contributes, read the nearby text, write only the missing information and test it in context. Store details with the corresponding product variant rather than copying one description across every color. For a bulk import, prioritize popular products and images tied to fit, safety or identification. Sample a range of records after the import and correct the mapping before making changes catalog-wide. Give merchandising teams clear rules for when an intentionally empty value is appropriate.",
+          "Treat generated suggestions as drafts. They may incorrectly identify a fabric, infer a demographic detail, or evaluate a photo without knowing why it is in the product journey. Have someone with product knowledge confirm every claim that affects a buying decision. If you cannot verify a feature, leave out the guess and make sure the structured product details provide the information customers need. Test fields for display, names and state in the real template so automation assists editorial review without replacing it."
+        ]
+      },
+      {
+        "heading": "Measure outcomes with a shopping task",
+        "paragraphs": [
+          "Pick a product that has a size chart, multiple images and a color variant. Ask a tester to use accessible names and nearby text to select the variant and answer a question about the product without relying on the images visually. Verify that alt text and variant state update after the selection, then proceed through the cart to confirm the order summary reflects the choice. Record both missing attributes and misleading alternatives. Fix the shared causes before tackling individual descriptions. The aim is equivalent buying information, including any crucial detail a shopper needs before paying."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "W3C alternative text decision tree",
+        "url": "https://www.w3.org/WAI/tutorials/images/decision-tree/"
+      },
+      {
+        "label": "W3C guidance on complex images",
+        "url": "https://www.w3.org/WAI/tutorials/images/complex/"
+      },
+      {
+        "label": "Shopify product media alt text instructions",
+        "url": "https://help.shopify.com/en/manual/products/product-media/add-alt-text"
+      }
+    ]
+  },
+  {
+    "slug": "keyboard-navigation-focus-skip-links",
+    "title": "Fixing Keyboard Navigation Traps, Focus Indicators, and Skip Links",
+    "description": "Test keyboard-only workflows, repair focus traps and verify that skip links reach the right content.",
+    "intro": "A keyboard user needs to know three things on every page: where focus is, how to operate the focused control, and how to move on. Focus problems tend to emerge when a team adds a sticky header, menu, dialog, or dynamically inserted form. Test each interaction from the first keystroke through completion and exit. A control that opens successfully can still block a task if it drops focus on close or leaves it behind after content changes.",
+    "sections": [
+      {
+        "heading": "Use native HTML for ordinary actions",
+        "paragraphs": [
+          "Start with an anchor for navigation and a button for a page action. An anchor with a destination naturally participates in keyboard navigation. A button brings focusability, activation behavior and an accessible role. Recreating these behaviors with a click handler on a div makes the team responsible for semantics, focus order and events. Adding a role alone does not implement keyboard operation. Keep visible naming aligned with the control’s accessible name so people using voice input can refer to the label they see.",
+          "Use Tab to move through ordinary elements and Shift+Tab to go back. Enter typically activates links; Enter and Space activate ordinary buttons. Specialized widgets may use directional keys inside the component, with Tab entering and leaving the widget. Choose the appropriate WAI-ARIA Authoring Practices pattern when a native element cannot do the job. A page navigation menu usually works well as links inside a disclosure. Using application menu roles can impose additional expectations that a basic site menu does not need."
+        ]
+      },
+      {
+        "heading": "Fix traps by following the whole interaction",
+        "paragraphs": [
+          "A keyboard trap exists when focus enters a component and cannot be moved away using the keyboard or an explained standard exit method. Check for date pickers, video players and frames that intercept Tab. Also check overlays that leave hidden regions focusable, making focus appear to vanish. Work through both directions, including reverse tabbing into and out of the component. If an embedded widget is the source of the problem, capture its version and the exact keystrokes for a vendor report.",
+          "A modal can constrain focus while it is open because background interaction is unavailable. It still needs an operable close path, focus inside it when opened, and a return location when dismissed. A native dialog opened with its modal behavior can handle much of the background isolation; where you implement custom behavior, follow the modal dialog pattern, provide a visible close button and test Escape. Return focus to the trigger when possible. If the trigger disappeared, focus a meaningful replacement, such as the heading of the updated results. Check that it is visible in the current viewport and that repeated open and close cycles work."
+        ]
+      },
+      {
+        "heading": "Make focus visible on actual surfaces",
+        "paragraphs": [
+          "WCAG 2.1 Level AA requires visible keyboard focus. Do not remove a browser outline unless the replacement is consistently visible. Use a clear outline or equivalent indicator with sufficient contrast against the adjacent background. Test against light and dark backgrounds, selected states, shadows, banners and the component’s disabled or invalid styles. A ring that works on a design-system demo may disappear when the component sits against a differently colored card. Consider a two-color indicator for controls that appear on several surfaces.",
+          "Place the focus style on the element that actually receives focus. The CSS focus-visible pseudo-class helps target states where the browser determines a visible indicator is needed. Provide suitable fallback behavior for environments your team supports, and confirm that forced-colors settings preserve an indicator. Verify that overflow rules do not cut off the outline, that outline offsets are sensible, and that sticky headers or footers do not obscure the focused control. Visible focus checks should reach account menus, language selectors, third-party widgets and all links in error summaries."
+        ]
+      },
+      {
+        "heading": "Give users a way past repeated navigation",
+        "paragraphs": [
+          "A skip link near the start of the document can let a keyboard user bypass a repeated header. Use a descriptive link, such as “Skip to main content,” and point it at a real primary content region with a unique ID. The link may remain visually hidden until focus, provided it is visibly and reliably displayed when focused. Avoid display rules that remove it from the tab order. Put the target in a sensible semantic location and make it programmatically focusable if needed. Verify where focus actually lands and where the next Tab goes.",
+          "Test the skip link on a narrow viewport, with a sticky header, and from different page templates. The target heading should remain visible after navigation. CSS scroll margins can help offset sticky elements. For a client-side application, ensure route changes give users a meaningful starting point, such as a new main heading. A skip link does not repair inaccessible menus, and landmarks do not substitute for testing whether repeated controls can be bypassed in your implementation."
+        ]
+      },
+      {
+        "heading": "Review focus order during dynamic updates",
+        "paragraphs": [
+          "Keep DOM order consistent with the visual and task order. Avoid assigning positive tabindex values to force a temporary sequence. When filtering results, retain focus on the control that triggered the change while announcing relevant updates. When submitting an invalid form, provide an error summary or another sensible focus destination with links to affected fields where appropriate. A long page that rerenders and moves focus to its beginning after every action is particularly difficult to use.",
+          "Check deletions as well as insertions. Removing a cart item can delete the button currently focused. Move focus to the next item, the previous item, or the cart heading when it becomes empty, depending on the workflow. Keep the move predictable and test it with a screen reader. If a new dialog or a route change needs focus, update it once the target exists. Preserve enough context that users understand what changed instead of assuming they will discover the result on their next Tab."
+        ]
+      },
+      {
+        "heading": "Make a repeatable keyboard acceptance check",
+        "paragraphs": [
+          "Start at the browser address bar, load the page, and leave the pointer alone. Use the skip link, open and close a navigation menu, reach the primary action, trigger an error, recover, and complete the operation. Repeat the flow in reverse where sensible. At each step, record the focused element, visible indicator, expected behavior and actual result. Run the check at high zoom and in at least one high-contrast environment your audience uses.",
+          "Report actionable defects. “Shift+Tab from the first field escapes behind the billing dialog” gives an engineer something to reproduce. Capture the component and state, then retest the same path after the fix. Maintain a short set of checks for reusable components so future work does not restore the trap or hide the indicator. Automated accessibility scanners can flag selected markup problems; these interaction tests establish what actually happens during task completion."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "W3C WCAG 2.1 standard",
+        "url": "https://www.w3.org/TR/WCAG21/"
+      },
+      {
+        "label": "W3C modal dialog pattern",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"
+      },
+      {
+        "label": "W3C skip-link technique G1",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G1.html"
+      }
+    ]
+  },
+  {
+    "slug": "color-contrast-ratios",
+    "title": "Color Contrast Ratios Explained: Passing WCAG 1.4.3 Without Redesigning Your Brand",
+    "description": "Measure text contrast correctly and fix failing color combinations while retaining your brand palette.",
+    "intro": "A brand palette gives you colors. Accessibility requirements tell you where those colors are usable together. A pale purple can work as a decorative background and still be too light for body text on white. The lowest-effort change is often to choose a darker semantic token for informative text and keep the original hue for illustrations, headers, borders or other uses that meet their own requirements. Evaluate each foreground and background pairing in the interface before rewriting the palette.",
+    "sections": [
+      {
+        "heading": "Apply the right threshold",
+        "paragraphs": [
+          "WCAG 2.1 Success Criterion 1.4.3 requires a contrast ratio of at least 4.5:1 for ordinary text and images of ordinary text. Large text has a minimum ratio of 3:1. WCAG’s definition includes text at least 18 points, or at least 14 points when bold. Those are about 24 CSS pixels and 18.67 CSS pixels, respectively. Check the actual effective font size and weight, especially with responsive type ramps and fonts that render thinly. Keep a margin above the threshold so a minor theme change does not accidentally break it.",
+          "The criterion has exceptions for logotypes and certain incidental content, such as text on genuinely inactive components or pure decoration. Brand colors do not exempt ordinary text used throughout the site. A company logo can keep its original treatment while a button in the same hue needs a readable label. A placeholder, helper instruction or essential number should be reviewed in context. If it communicates something people need to act, design a readable presentation regardless of the component’s muted visual style. Also review non-text contrast under 1.4.11 for applicable interface information and graphical objects."
+        ]
+      },
+      {
+        "heading": "Understand how the ratio is measured",
+        "paragraphs": [
+          "Contrast is computed from the relative luminance of the lighter and darker colors. The formula adds 0.05 to each value and divides the lighter result by the darker. The resulting scale runs from 1:1 for identical luminance to 21:1 for black on white. Relative luminance is calculated by converting color channels and weighting them according to their contribution to perceived brightness. A visually vivid color can have a luminance close to white and therefore be a poor choice for prominent text on a white background.",
+          "Use a tool that applies the WCAG calculation and reports the actual ratio. Do not round 4.49 up to a pass at 4.5. For a solid example, pure white on pure black is 21:1. Medium gray #777777 on white is approximately 4.48:1, narrowly below the ordinary-text threshold. Changing that text to #767676 gets just above 4.5:1. In production, choose a more comfortable margin and test it with the typeface, background and component states you ship. Look at computed styles or the effective colors in the rendered component, not just the values in a brand document."
+        ]
+      },
+      {
+        "heading": "Inventory the pairs people have to read",
+        "paragraphs": [
+          "Inventory text roles such as primary body text, secondary instructions, labels, placeholder examples, link text, prices, sale badges and errors. Note the backgrounds on which each appears. A secondary text token might pass on white but fail on a gray card or an amber warning. Record hover, focus, selected and pressed states because sites often change text or background on interaction. Check error and success variants, table rows and pagination. Text is still needed when a button is in a loading state or an item is selected.",
+          "Images and gradients demand more care. Measure against the least favorable expected background behind the text, including responsive crops, carousel images and user-uploaded backgrounds. Add a tested opaque plate, stronger scrim or consistent background region when needed. Translucent layers require the effective composited color. A translucent light text token may pass against black but fail against an image whose bright area sits behind the same heading. If the design permits unpredictable images, make the text layer robust without relying on each editor to choose the perfect crop."
+        ]
+      },
+      {
+        "heading": "Preserve the visual language with semantic tokens",
+        "paragraphs": [
+          "Separate palette values from component roles. Keep a light brand accent for decoration and add a darker variant for links, action labels or headings on light surfaces. Choose foreground and background tokens as tested pairs. For example, define a link-on-light token and a link-on-dark token instead of applying a universal brand color in both places. Use the lighter hue for large decorative shapes that convey no required information. Preserve other brand cues such as spacing, typography and illustration while adjusting a few roles with measurable failures.",
+          "Give state tokens the same treatment. A default button might use an accessible navy-on-lavender pair. On hover, preserve contrast after darkening the fill. On focus, check the indicator against its adjacent colors, including when it overlaps a panel. For an error, use readable text and a clear icon or written prefix alongside the color change. WCAG’s use-of-color criterion is separate from the numerical ratio: a form should communicate what is wrong without requiring users to distinguish red from green. Evaluate both concerns during design review."
+        ]
+      },
+      {
+        "heading": "Test themed, mobile and high-zoom views",
+        "paragraphs": [
+          "Render representative components in light and dark themes, or tenant-branded configurations where customers can change colors. At narrow widths, headings may shrink below the large-text threshold. A desktop ratio that qualifies for a large heading may fail on mobile when the same class uses a smaller size. Zoom and reflow can put labels over different surfaces or reveal a sticky navigation state. Test those states as well as the normal desktop screenshot.",
+          "Include a check for images of text, especially old sale banners and event posters. Replacing embedded words with HTML can make text easier to enlarge, translate and update while giving designers direct control over its color. When text genuinely must remain in an image, evaluate the rendered colors and size and provide the necessary equivalent information. For users who rely on forced-colors settings, check that controls and focus remain perceivable even if the browser changes your palette."
+        ]
+      },
+      {
+        "heading": "Turn results into maintainable fixes",
+        "paragraphs": [
+          "Document each issue with the selector or component, foreground, background, measured ratio, intended threshold and affected state. Fix the shared token or component wherever feasible. Add a sample to your design system showing supported text and background combinations. Use automated color-pair tests for stable tokens and repeat manual measurements for composite surfaces and images. A static HTML scan can discover some explicitly styled low-contrast pairs but cannot compute all rendered CSS or inspect every image crop. Verify the actual design before publishing. Where a redesigned token still fails in a particular state, change that state deliberately instead of accepting a near miss."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "W3C WCAG 2.1 standard",
+        "url": "https://www.w3.org/TR/WCAG21/"
+      },
+      {
+        "label": "W3C Understanding Contrast (Minimum)",
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html"
+      },
+      {
+        "label": "W3C Understanding Non-text Contrast",
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html"
+      }
+    ]
+  },
+  {
+    "slug": "shopify-accessibility-audit",
+    "title": "How to Audit and Remediate a Shopify Store for ADA & WCAG 2.1 AA",
+    "description": "Test Shopify themes, apps and checkout across complete shopping journeys, then assign and verify fixes.",
+    "intro": "A Shopify accessibility audit should follow a shopper from selecting a product through placing an order. The storefront theme, merchant content, app embeds and hosted checkout can produce different barriers and need different owners. Test the live storefront configuration, then reproduce issues in a duplicate theme or suitable test environment. Shopify’s theme guidance is a starting point. The customer experience also depends on the settings, content, integrations and changes your store ships.",
+    "sections": [
+      {
+        "heading": "Build a useful storefront sample",
+        "paragraphs": [
+          "Choose a home page, a collection with active filters, search with and without results, a product with variants, a product using media, the cart, relevant checkout paths and the order confirmation. Add an account, returns or subscription workflow if customers rely on it. Test an out-of-stock selection, changing quantities and an invalid shipping address as well as a successful purchase. Include a mobile layout and narrow zoomed viewport. Third-party storefront features such as reviews, chat, subscriptions and pickup checkers can change both keyboard order and screen-reader announcements.",
+          "Record the theme revision, active app embeds, locale, customer state, browser and device. A logged-out customer can encounter a different purchase or registration flow from a returning customer. If you use several markets, compare any materially different payment or language paths. Use test-mode payments or an authorized testing process to avoid unintended orders. Take screenshots when useful, but include clear reproduction steps and expected accessible behavior in every issue. This gives the developer or vendor a way to verify the repair."
+        ]
+      },
+      {
+        "heading": "Review product information and variant controls",
+        "paragraphs": [
+          "Confirm the page heading identifies the product and headings organize details beneath it. Inspect the gallery in its rendered state, including after changing a variant. Shopify lets merchants store media alternatives, but the theme needs to emit useful markup for the component. Distinguish the product’s important visual details from decorative imagery and avoid replacing every alternative with the same product title. Ensure functional thumbnail buttons have descriptive names. Present size charts, materials and care instructions as HTML text or properly structured tables instead of images alone.",
+          "Work through color and size selection with a keyboard and screen reader. A swatch needs a name, such as “Forest green,” and its selected and unavailable states must be perceivable. Use appropriate native controls or model equivalent semantics deliberately. When the price, media or availability changes, communicate relevant updates without moving focus away from the choice. A customer should know if a specific combination is unavailable and how to pick a valid alternative. Verify that the cart line item contains the chosen variant rather than trusting the appearance of the swatch alone."
+        ]
+      },
+      {
+        "heading": "Test navigation, overlays and cart updates",
+        "paragraphs": [
+          "Open and close nested menus, filter drawers, quick views, subscription dialogs and the cart drawer using only the keyboard. Watch for hidden elements that can still receive focus and visible controls whose focus styles disappeared in the theme. If a drawer behaves as a modal, check initial focus, its close button, Escape behavior and focus restoration. Test with the cart empty, with several items, and after removing the item whose remove button had focus. Follow the actual tab order rather than relying on the sequence implied by the visual layout.",
+          "Add a product to the cart and confirm the update can be understood by someone who does not see the animation. Meaningful status messages can announce successful additions or quantity changes without interrupting every keystroke. Name repeated buttons with enough product context to distinguish them. When a bad discount code or quantity restriction occurs, make the message readable, discoverable and tied to the relevant action. Check whether sticky purchase controls or promotional bars obscure content at mobile sizes or high zoom."
+        ]
+      },
+      {
+        "heading": "Include hosted checkout and app content",
+        "paragraphs": [
+          "Continue from the storefront into the checkout experience your customers use. Check shipping methods, pickup selection, address and payment errors, accessible names of embedded fields, and the final confirmation. Test the supported checkout customizations and extensions directly. A theme patch cannot repair every checkout or vendor-controlled issue. Identify whether the merchant can change settings, the theme team can fix markup, or the app supplier needs to make a change. Give the vendor the failing workflow and the affected assistive technology along with enough context to reproduce it.",
+          "Review app blocks separately in a controlled test environment if their effects overlap. A chat launcher can interfere with a sticky checkout button. A subscription widget can add unlabelled controls or recalculate the price without feedback. Compare behavior before and after the integration to identify ownership and verify a fix, then retest the complete installed configuration. If the vendor cannot resolve an essential barrier, evaluate alternatives in the same workflow before replacing the app."
+        ]
+      },
+      {
+        "heading": "Fix at the level where a defect is introduced",
+        "paragraphs": [
+          "Correct a bad media description in the catalog. Fix reused control semantics in the theme snippet or shared component. Review color pairs across theme settings and interaction states rather than overriding a single page with an unexplained CSS selector. For example, a utility class that removes focus outlines should be replaced or revised at the style source so every affected navigation item improves. Keep patch and test details together so your changes can be reapplied or reevaluated after a theme upgrade.",
+          "For vendor tickets, specify the desired outcome and ask for a version and validation date. A statement that a product is “WCAG-ready” is less useful than evidence that a keyboard user can choose a shipping option and complete checkout in your store. Verify such claims against actual deployment, including settings and interactions created by your own content. Prioritize the defects that prevent buying, requesting help or following safety information over lower-impact presentation differences."
+        ]
+      },
+      {
+        "heading": "Gate releases on a short manual regression",
+        "paragraphs": [
+          "Keep a repeatable script for selecting a variant, checking price and availability, adding to the cart, recovering from an error and reaching order confirmation. Repeat it after theme upgrades, new app embeds, seasonal campaigns and checkout changes. Automated checks can catch names, markup and some contrast signals, but validate the rendered customer path manually using keyboard navigation, screen readers, zoom and supported mobile configurations. Include disabled shoppers in evaluation when feasible. Track who verified the release, which theme and app versions were tested, and which issues remain. Use those facts when publishing an accessibility statement or discussing an unresolved barrier with a vendor."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Shopify theme accessibility best practices",
+        "url": "https://shopify.dev/docs/storefronts/themes/best-practices/accessibility"
+      },
+      {
+        "label": "Shopify Theme Store requirements",
+        "url": "https://shopify.dev/docs/storefronts/themes/store/requirements"
+      },
+      {
+        "label": "Shopify product media alt text instructions",
+        "url": "https://help.shopify.com/en/manual/products/product-media/add-alt-text"
+      },
+      {
+        "label": "W3C WCAG 2.1 standard",
+        "url": "https://www.w3.org/TR/WCAG21/"
+      }
+    ]
+  },
+  {
+    "slug": "accessibility-overlays-vs-source-remediation",
+    "title": "Accessibility Overlays vs. Source-Code Remediation: What Actually Protects Your Site",
+    "description": "Evaluate overlay claims, repair accessibility barriers at their source and validate changes with manual testing.",
+    "intro": "An accessibility overlay is commonly a script that adds a toolbar, changes the rendered page, or attempts automatic repairs after a website loads. Products differ. A text-size preference control and a service that promises to rewrite accessible names have different capabilities and risks. Assess the proposed tool by testing whether people can complete meaningful tasks in your actual site. A contract, toolbar icon or changed scan score cannot establish what happens when a customer reaches a payment frame or a resident opens a public application.",
+    "sections": [
+      {
+        "heading": "Separate preferences from repair",
+        "paragraphs": [
+          "A preference tool might adjust spacing, reduce animation or offer alternative color schemes. Those features can be useful to some people when they work, store preferences appropriately and do not conflict with other settings. Users may already have preferences configured in their browser, operating system or assistive technology. Check that the site remains usable with those settings independently of a toolbar and that the toolbar itself is accessible. Its presence should never be the only way to access the content or report a problem.",
+          "Repairing an accessibility problem means changing the conditions that cause it. An unnamed icon button can receive a meaningful name in the component that creates it. A date picker can be redesigned so its keyboard operation is predictable. Image alternatives can be added to the catalog where an editor knows what visual information matters. Changes to the source can include design tokens, CMS content, application logic, component markup, server templates and vendor configurations. The goal is to deliver the correct semantics and behavior every time that part of the site is used."
+        ]
+      },
+      {
+        "heading": "Understand what automatic rewriting can infer",
+        "paragraphs": [
+          "Automation can often tell whether an image element has an alt attribute. It cannot reliably infer why an editor chose that image, whether it conveys a size chart, or which details distinguish similar variants. A generic generated label can satisfy a simple presence check while still leaving a shopper without the information needed to decide. An automatically inserted name may duplicate or override a visible label, making it harder for voice control users to operate the interface. Review anything inserted by a script in the context of the rendered page and accessible name computation.",
+          "Complex component failures are more difficult. A modal must manage focus, provide a usable close path, isolate background interaction when appropriate and restore focus after dismissal. A screen-reader announcement needs the right detail at the right time. An external payment field may live in a separate frame outside a script’s control. An uploaded PDF can have a structure problem that a web toolbar has no way to repair. Identify barriers by source and task instead of assuming that a site-wide script affects every part of the experience uniformly."
+        ]
+      },
+      {
+        "heading": "Evaluate claims and ask for evidence",
+        "paragraphs": [
+          "The FTC’s final order involving accessiBe in 2025 addressed allegations about deceptive and unsubstantiated accessibility claims. The case is a reminder to read marketing terms closely and ask what evidence supports a specific assertion. It does not decide whether each type of preference tool helps a given user. Ask vendors which criteria and technologies they cover, what manual checks are included, what happens with third-party embeds and documents, and how the product behaves when its script is delayed or blocked.",
+          "Request a test on your own representative workflows in the browser and assistive technology combinations your audience uses. Start with a known accessibility defect and establish its impact before enabling the tool. Compare the full workflow under ordinary conditions, with the tool, and with the source repaired. Record which changes are visible in the accessible tree and which actually improve task completion. Ask for an explanation of any new barriers and a remediation timeline. If the proposed evidence is a scan score, ask to see the criteria and tasks the scanner cannot evaluate."
+        ]
+      },
+      {
+        "heading": "Work from a source-level backlog",
+        "paragraphs": [
+          "Build a list of the most consequential user journeys and identify their shared components and vendors. Choose representative templates and test both completion and error recovery. A restaurant might focus on choosing menu items, applying an allergy-related instruction, and paying. A public body might focus on requesting a service, uploading a document and receiving a confirmation. Allocate fixes based on impact and recurrence, then give each issue an owner and acceptance test. Include interactions that users rely on even when the underlying defect has no simple static rule.",
+          "Repair shared controls and content pipelines so fixes survive ordinary publishing. An input component should consistently associate labels and errors. A content workflow should distinguish an intentionally decorative image from a missing alternative. A design system should describe tested color combinations and visible focus rules. For an app or vendor portal outside your control, send reproducible evidence and test the vendor’s delivered fix against the end-to-end process. Find a usable alternative where the dependency prevents people from completing an essential task."
+        ]
+      },
+      {
+        "heading": "Validate with people and assistive technology",
+        "paragraphs": [
+          "A manual evaluation checks more than markup presence. Run the task by keyboard, at high zoom, with a screen reader, and under relevant accessibility settings. Include users with disabilities when feasible and respect their preferred ways of working. Ask what happened, where the workflow became difficult, and whether changes made the experience understandable. Review findings against the relevant WCAG criteria and document any limits in the scope. Automated scans detect only an estimated 30–40% of WCAG issues; different content and tools lead to different results.",
+          "Test for regressions if you continue using a preference or assistance widget. Verify that it can be reached and dismissed, does not insert unexpected focus stops, does not change names in a confusing way, and respects zoom and user preferences. Review provider data handling and performance separately. For example, a network-loaded script can interact differently with a slow connection or browser extensions. Keep contact and feedback options available so people can report barriers even if the optional tool fails."
+        ]
+      },
+      {
+        "heading": "Keep your claims tied to the work",
+        "paragraphs": [
+          "A practical risk-reduction program pairs source remediation with recurring manual verification, effective feedback and evidence that high-impact journeys work. Set a technical target, maintain a report of tested scope and remaining issues, and keep owners accountable for vendor upgrades and new content. Tell users how to request assistance and describe any known limits precisely. Neither a tool purchase nor a source patch establishes legal compliance on its own. For an inquiry about statutory obligations, remedies or litigation exposure, consult qualified counsel and bring the specifics of the affected service and the testing history."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "FTC case record and final order involving accessiBe",
+        "url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/2223156-accessibe-inc"
+      },
+      {
+        "label": "W3C conformance evaluation methodology overview",
+        "url": "https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/"
+      },
+      {
+        "label": "W3C WCAG 2.1 standard",
+        "url": "https://www.w3.org/TR/WCAG21/"
+      }
+    ]
+  }
+]
